@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class 1</title>
+    <style>
+      h1 {
+        color: red;
+        background-color: black;
+        align-self: center;
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+      }
+      p {
+        color: purple;
+        background-color: black;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        size-adjust: auto;
+        text-align: center;
+        border: white 10px solid;
+        padding: 10px;
+      }
+      .Name {
+        background-color: pink;
+        color: blue;
+      }
+      .bean {
+        color: red;
+        background: darkgreen;
+      }
+      .roast {
+        color: pink;
+        background-color: bisque;
+      }
+      .drink {
+        color: aquamarine;
+        background-color: darkorchid;
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <h1>Class 1 Lab</h1>
+      <p class="Name">What is your name?</p>
+      <p class="bean">What is your favorite coffee bean?</p>
+      <p class="roast">What is your favorite coffee roast?</p>
+      <p class="drink">What is your favorite coffee drink?</p>
+    </main>
+    <p>
+      <script>
+        let coffeeName = prompt("What is your name");
+        let coffeeBean = prompt("What is your favorite coffee bean?");
+        let coffeeRoast = prompt("What is your favorite coffee roast style?");
+        let coffeeDrink = prompt("What is your favorite drink");
+        document.write( 
+          "Hello " +
+            coffeeName +
+            "! Your favorite coffee bean is " +
+            coffeeBean +
+            " and your favorite roast is " +
+            coffeeRoast +
+            " and your favorite coffee drink is " +
+            coffeeDrink +
+            ". Here are some recommendations based on your answers."
+        );
+        console.log(
+          "This person is named " +
+            coffeeName +
+            "their favorite bean is, " +
+            coffeeBean +
+            " and their favorite roast is" +
+            coffeeRoast +
+            " and their favorite drink is" +
+            coffeeDrink
+        );
+      </script>
+    </p>
+  </body>
+</html>
