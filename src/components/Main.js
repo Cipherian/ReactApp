@@ -1,34 +1,27 @@
-import { Component } from 'react';
-import list from '../components/data.json';
-import HornedBeast from './HornedBeast.js';
+import { Component } from "react";
+import list from "../components/data.json";
+import HornedBeast from "./HornedBeast.js";
 
 class Main extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      currentClicks: 0,
-      beastList: list,
+      hornedBeastList: list,
     }
   }
 
-  
-  beastClicks = () => {
-    this.setState((state) => {
-      return {currentClicks: state.currentClicks + 1}
-    })
-  }
-
-  render(){
-    console.log(this.state.currentBeast);
+  render() {
     return(
       <div id='main'>
-        <HornedBeast 
-        beasts={this.state.beastList} 
-        clickBeast={this.beastClicks} 
-        />
+        {this.state.hornedBeastList.map(beast =>
+          <HornedBeast
+            title={beast.title}
+            image_url={beast.image_url}
+            description={beast.description} />
+          )}
       </div>
     )
   }
 }
-export default Main;
 
+export default Main;
