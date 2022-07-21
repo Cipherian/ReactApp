@@ -1,4 +1,5 @@
 import { Component } from "react";
+import Card from 'react-bootstrap/Card';
 
 
 class HornedBeast extends Component {
@@ -11,26 +12,30 @@ class HornedBeast extends Component {
 
   handleClick = () => {
     this.setState({clicks: this.state.clicks+1});
-    console.log(this, this.state.clicks);
+    console.log(this.state.clicks);
   }
 
   render() {
     return (
-      <div class="beasts">
-        <h2>{this.props.title}</h2>
-          <img
+      <Card id= 'beasts' style={{ width: '20rem' }}>
+      <Card.Body class='cardbody'>
+        <Card.Title class='cardtitle'>{this.props.title}</Card.Title>
+        <Card.Img
+            class='cardimage'
             alt={this.props.title}
-            height="250"
+            height="200"
             width="250"
             src={this.props.image_url}
             onClick={this.handleClick}
             />
-            <p>{this.props.description}</p>
-            <p>&hearts; ={this.state.clicks}</p>
-      </div>
+             <Card.Text class='card-text'>{this.props.description} </Card.Text>
+             <Card.Text class='card-text'>&hearts; ={this.state.clicks} </Card.Text>
+            </Card.Body>
+            </Card>
     );
   }
 }
 
 
 export default HornedBeast;
+
