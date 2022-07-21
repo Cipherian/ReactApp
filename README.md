@@ -1,7 +1,13 @@
 # Worked on by Daniel Brott
 
-- Got the images to render properly
+- Number and name of feature: Clickhandler, mapping the array of objects in json, bootstrap implementation
 
-- Then I got everything to render from the JSON file.
+- Estimate of time needed to complete: 4 hours
 
--
+- Start time: 4:30pm
+
+- Stopped: 6:30 to 7:30pm for class
+
+- Finish time: 10:30pm
+
+- Actual time needed to complete: 6 hours
