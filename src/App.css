@@ -6,6 +6,10 @@
   text-align: center;
 }
 
+#bigHeader{
+  font-size: 1rem;
+}
+
 h1 {
   font-size: 4rem;
 }
@@ -44,5 +48,9 @@ h2 {
 .card-text {
   text-align: center;
 
+}
+
+#bigfooter {
+  font-size: 5rem;
 }
 
