@@ -2,6 +2,8 @@ import { Component } from "react";
 import Card from 'react-bootstrap/Card';
 
 
+
+
 class HornedBeast extends Component {
   constructor(props) {
     super(props);
@@ -12,24 +14,24 @@ class HornedBeast extends Component {
 
   handleClick = () => {
     this.setState({clicks: this.state.clicks+1});
-    console.log(this.state.clicks);
   }
 
   render() {
     return (
       <Card id= 'beasts' style={{ width: '20rem' }}>
-      <Card.Body class='cardbody'>
-        <Card.Title class='cardtitle'>{this.props.title}</Card.Title>
+      <Card.Body className='cardbody'>
+       
+        <Card.Title className='cardtitle' onClick={this.handleClick}>{this.props.title}</Card.Title>
         <Card.Img
-            class='cardimage'
+            className='cardimage'
             alt={this.props.title}
             height="200"
             width="250"
             src={this.props.image_url}
-            onClick={this.handleClick}
+            onClick={this.props.openModal}
             />
-             <Card.Text class='card-text'>{this.props.description} </Card.Text>
-             <Card.Text class='card-text'>&hearts; ={this.state.clicks} </Card.Text>
+             <Card.Text className='card-text'>{this.props.description} </Card.Text>
+             <Card.Text className='card-text'>&hearts; ={this.state.clicks} </Card.Text>
             </Card.Body>
             </Card>
     );

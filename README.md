@@ -11,3 +11,15 @@
 - Finish time: 10:30pm
 
 - Actual time needed to complete: 6 hours
+
+============================================================
+
+- Number and name of feature:
+
+- Estimate of time needed to complete:
+
+- Start time:
+
+Finish time:
+
+Actual time needed to complete:

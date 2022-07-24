@@ -2,6 +2,7 @@ import { Component } from "react";
 import list from "../components/data.json";
 import HornedBeast from "./HornedBeast.js";
 
+
 class Main extends Component {
   constructor(props) {
     super(props);
@@ -9,6 +10,15 @@ class Main extends Component {
       hornedBeastList: list,
     }
   }
+
+  closeModal = () => {
+    this.setState({ showModal: false });
+  };
+
+  openModal = (beastName) => {
+    const selectedBeast = list.find(beast => beast.title === beastName);
+    this.setState({showModal: true, selectedBeast});
+  };
 
   render() {
     return(
@@ -18,7 +28,7 @@ class Main extends Component {
             title={beast.title}
             image_url={beast.image_url}
             description={beast.description} />
-          )}
+          )};
       </div>
     )
   }
