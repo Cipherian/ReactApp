@@ -1,35 +1,22 @@
 import { Component } from "react";
-import list from "../components/data.json";
 import HornedBeast from "./HornedBeast.js";
-
+import list from "../components/data.json";
+import {Container} from 'react-bootstrap';
 
 class Main extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      hornedBeastList: list,
-    }
-  }
-
-  closeModal = () => {
-    this.setState({ showModal: false });
-  };
-
-  openModal = (beastName) => {
-    const selectedBeast = list.find(beast => beast.title === beastName);
-    this.setState({showModal: true, selectedBeast});
-  };
 
   render() {
     return(
-      <div id='main'>
-        {this.state.hornedBeastList.map(beast =>
+      <Container fluid id = 'main'>
+        {list.map(beast =>
           <HornedBeast
             title={beast.title}
             image_url={beast.image_url}
-            description={beast.description} />
+            description={beast.description} 
+            handleShowModal = {this.props.handleShowModal}
+            />
           )};
-      </div>
+              </Container>
     )
   }
 }
