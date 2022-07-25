@@ -8,21 +8,20 @@ class SelectedBeast extends Component {
     return (
       <>
         <Modal
-          show={this.props.show}
+          show={this.props.showModal}
           onHide={this.props.closeModal}
           animation={false}
         >
-          <Modal.Header closeButton>
-            <Modal.Title>{this.props.title}</Modal.Title>
+          <Modal.Header closeButton onClick = {this.props.handleExitModal}>
+            <Modal.Title>{this.props.selectedBeast.title}</Modal.Title>
           </Modal.Header>
           <Image
-            src={this.props.image_url}
-            alt={this.props.title}
-            title={this.props.title}
+            src={this.props.selectedBeast.image_url}
+            alt={this.props.selectedBeast.title}
+            title={this.props.selectedBeast.title}
           />
-          <Modal.Body>{this.props.description}</Modal.Body>
+          <Modal.Body>{this.props.selectedBeast.description}</Modal.Body>
           <Modal.Footer>
-            <Button variant="light" onClick={this.props.closeModal}></Button>
           </Modal.Footer>
         </Modal>
       </>

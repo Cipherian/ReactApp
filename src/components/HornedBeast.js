@@ -1,5 +1,6 @@
 import { Component } from "react";
 import Card from 'react-bootstrap/Card';
+import Button from "react-bootstrap/Button";
 
 
 
@@ -16,23 +17,25 @@ class HornedBeast extends Component {
     this.setState({clicks: this.state.clicks+1});
   }
 
+
   render() {
     return (
       <Card id= 'beasts' style={{ width: '20rem' }}>
       <Card.Body className='cardbody'>
        
-        <Card.Title className='cardtitle' onClick={this.handleClick}>{this.props.title}</Card.Title>
+        <Card.Title className='cardtitle'>{this.props.title}</Card.Title>
         <Card.Img
             className='cardimage'
             alt={this.props.title}
             height="200"
             width="250"
             src={this.props.image_url}
-            onClick={this.props.openModal}
+            onClick={this.handleClick}
             />
              <Card.Text className='card-text'>{this.props.description} </Card.Text>
              <Card.Text className='card-text'>&hearts; ={this.state.clicks} </Card.Text>
             </Card.Body>
+            <Button onClick={()=>this.props.handleShowModal(this.props.title)}> Expand </Button>
             </Card>
     );
   }
