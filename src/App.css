@@ -54,3 +54,15 @@ h2 {
   font-size: 5rem;
 }
 
+.modal {
+  height: fit-content;
+  width: 600px;
+  background-color: lightblue;
+  border: 2px solid black;
+}
+
+.modalImage {
+  border: 2px solid black;
+
+}
+
