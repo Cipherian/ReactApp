@@ -4,6 +4,7 @@ import Header from "./components/Header.js";
 import Footer from "./components/Footer.js";
 import Main from "./components/Main.js";
 import Card from "react-bootstrap/Card";
+import BeastForm from './components/BeastForm';
 import SelectedBeast from "./components/SelectedBeast.js";
 import list from "./data.json";
 import Container from 'react-bootstrap/Container';
@@ -28,10 +29,15 @@ class App extends Component {
     this.setState({ showModal: true, selectedBeast });
   };
 
+  updateBeastList = (filterList) => {
+    this.setState({Title: filterList});
+  }
+
   render() {
     return (
       <Container className="App">
         <Header />
+        <BeastForm list={list} updateBeastList={this.updateBeastList} />
         <Main handleShowModal={this.handleShowModal} />
         <SelectedBeast 
         showModal = {this.state.showModal} 
