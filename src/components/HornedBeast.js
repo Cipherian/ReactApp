@@ -10,14 +10,13 @@ class HornedBeast extends Component {
     super(props);
     this.state = {
       clicks:0,
+      
     }
   }
 
   handleClick = () => {
-    this.setState({clicks: this.state.clicks+1});
-  }
-
-
+    this.setState({ clicks: this.state.clicks + 1 });
+  };
   render() {
     return (
       <Card id= 'beasts' style={{ width: '20rem' }}>
